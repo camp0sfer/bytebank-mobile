@@ -6,9 +6,10 @@
  */
 
 import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
+import { initializeAuth, getReactNativePersistence } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
+import ReactNativeAsyncStorage from '@react-native-async-storage/async-storage';
 
 // Configuração Firebase usando variáveis de ambiente
 const firebaseConfig = {
@@ -32,7 +33,9 @@ Object.entries(firebaseConfig).forEach(([key, value]) => {
 const app = initializeApp(firebaseConfig);
 
 // Inicializar serviços Firebase
-export const auth = getAuth(app);
+export const auth = initializeAuth(app, {
+  persistence: getReactNativePersistence(ReactNativeAsyncStorage)
+});
 export const db = getFirestore(app);
 export const storage = getStorage(app);
 
