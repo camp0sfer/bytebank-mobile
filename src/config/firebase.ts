@@ -1,37 +1,20 @@
-/**
- * Configuração Firebase - ByteBank Mobile
- * 
- * ✅ Configuração segura com variáveis de ambiente
- * ✅ Compatível com Hermes JavaScript Engine
- */
-
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
-// Configuração Firebase usando variáveis de ambiente
 const firebaseConfig = {
-  apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.EXPO_PUBLIC_FIREBASE_APP_ID,
-  measurementId: process.env.EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID
+  apiKey: "AIzaSyAeOkgwrFdihEgbmc3oE_Hy4dYhsx4gF6s",
+  authDomain: "bytebank-mobile-df718.firebaseapp.com",
+  projectId: "bytebank-mobile-df718",
+  storageBucket: "bytebank-mobile-df718.firebasestorage.app",
+  messagingSenderId: "80052404276",
+  appId: "1:80052404276:web:03c05a1d8802c148138a61",
+  measurementId: "G-L5BE8L885P"
 };
 
-// Validar credenciais obrigatórias
-Object.entries(firebaseConfig).forEach(([key, value]) => {
-  if (!value) {
-    throw new Error(`❌ Firebase: Variável EXPO_PUBLIC_FIREBASE_${key.toUpperCase()} não encontrada`);
-  }
-});
-
-// Inicializar Firebase App
 const app = initializeApp(firebaseConfig);
 
-// Inicializar serviços Firebase
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 export const storage = getStorage(app);
