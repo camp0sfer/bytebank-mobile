@@ -21,7 +21,7 @@ export function RecentTransactions({
     return new Intl.NumberFormat('pt-BR', {
       style: 'currency',
       currency: 'BRL',
-    }).format(value / 100);
+    }).format(value);
   };
 
   const getTransactionIcon = (type: string) => {

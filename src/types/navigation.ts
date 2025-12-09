@@ -9,6 +9,8 @@ export type RootStackParamList = {
   Dashboard: undefined;
   Home: undefined;
   Transactions: undefined;
+  AddIncome: undefined;
+  AddExpense: undefined;
 };
 
 export type TabParamList = {

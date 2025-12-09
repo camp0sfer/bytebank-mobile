@@ -15,6 +15,8 @@ import SignUpScreen from '../screens/auth/SignUpScreen';
 // Telas protegidas
 import HomeScreen from '../screens/protected/HomeScreen';
 import TransactionsScreen from '../screens/protected/TransactionsScreen';
+import AddIncomeScreen from '../screens/protected/AddIncomeScreen';
+import AddExpenseScreen from '../screens/protected/AddExpenseScreen';
 
 // Componente de loading
 import LoadingScreen from '../components/LoadingScreen';
@@ -125,6 +127,8 @@ function ProtectedStack() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="MainTabs" component={ProtectedTabs} />
+      <Stack.Screen name="AddIncome" component={AddIncomeScreen} />
+      <Stack.Screen name="AddExpense" component={AddExpenseScreen} />
     </Stack.Navigator>
   );
 }

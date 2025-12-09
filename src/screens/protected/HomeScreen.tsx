@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
   View,
   Text,
@@ -8,6 +8,7 @@ import {
   Alert,
 } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
+import { useFocusEffect } from '@react-navigation/native';
 import { useAuth } from '../../hooks/useAuth';
 import { TransactionService } from '../../services/TransactionService';
 import { Transaction } from '../../types';
@@ -34,9 +35,12 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
 
-  useEffect(() => {
-    loadData();
-  }, []);
+  // Recarregar dados sempre que a tela ganhar foco
+  useFocusEffect(
+    useCallback(() => {
+      loadData();
+    }, [user])
+  );
 
   const loadData = async () => {
     if (!user) return;
@@ -73,8 +77,7 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
       icon: 'add-circle',
       color: '#4CAF50',
       onPress: () => {
-        // TODO: Navegar para tela de adicionar receita
-        Alert.alert('Em breve', 'Funcionalidade em desenvolvimento');
+        navigation.navigate('AddIncome');
       },
     },
     {
@@ -83,8 +86,7 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
       icon: 'remove-circle',
       color: '#F44336',
       onPress: () => {
-        // TODO: Navegar para tela de adicionar despesa
-        Alert.alert('Em breve', 'Funcionalidade em desenvolvimento');
+        navigation.navigate('AddExpense');
       },
     },
     {
