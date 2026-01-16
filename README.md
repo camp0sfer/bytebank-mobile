@@ -2,25 +2,9 @@
 
 ByteBank: Aplicação Mobile, utilizando React Native (Expo), Firebase Storage e Cloud Firestore.
 
-[![Expo](https://img.shields.io/badge/Expo-%7E54.0.13-000000?style=flat&logo=expo&logoColor=white)](https://expo.dev/)
-[![React Native](https://img.shields.io/badge/React_Native-0.81.4-61DAFB?style=flat&logo=react&logoColor=white)](https://reactnative.dev/)
-[![Firebase Storage](https://img.shields.io/badge/Firebase_Storage-Storage-FFA611?style=flat&logo=firebase&logoColor=white)](https://firebase.google.com/products/storage)
-[![Cloud Firestore](https://img.shields.io/badge/Cloud_Firestore-Database-FFA611?style=flat&logo=firebase&logoColor=white)](https://firebase.google.com/products/firestore)
-
 ## O que é o ByteBank?
 
 O ByteBank é uma aplicação financeira desenvolvida como desafio no desenvolvimento Mobile do Tech Challenge, Fase 3, do curso de pós-graduação em Front-End Engineering da FIAP.
-
-## Contexto do Projeto
-
-- 🔗 [Repositório Fase 1](https://github.com/karenkramek/bytebank-fiap)
-- 🔗 [Repositório Fase 2](https://github.com/karenkramek/fiap-tech-challenge-2)
-
-## Gestão de Projeto
-
-- 📊 [Trello (Fase 3)](https://trello.com/b/YkdMifCT/fase-3)
-- 📹 [Vídeo de Apresentação (Fase 3)](https://drive.google.com/file/d/1A9vJEmAHEGbdnaqaWjYwAB1q334PJo8B/view?usp=sharing)
-- 📱 [Link do APK (Android)](https://expo.dev/accounts/karenkramek/projects/bytebank-mobile/builds/6d0669ca-5d39-4f18-887d-d279122e8dd1)
 
 ## Estrutura do Projeto
 
@@ -216,12 +200,3 @@ npm run web        # Executar na web
 - **QR Code não é lido**: Altere para `Tunnel` no Expo Dev Tools
 - **App não atualiza**: Feche e reabra `Expo Go` ou limpe o cache com `npx expo start -c`
 - **`adb devices` não lista o aparelho**: Verifique permissões/cabo e as ferramentas do Android
-
-## **Integrantes do Grupo**
-
-| Nome | Email | RM |
-|------|-------|------|
-| Fernanda Raquel Campos Jiacinto | [fernanda.frcj@gmail.com](mailto:fernanda.frcj@gmail.com) | RM366526 |
-| Kaique Kenichi Furukawa Endo | [kaiquefurukawa@gmail.com](mailto:kaiquefurukawa@gmail.com) | RM366448 |
-| Karen Cristina Kramek | [kakakramek@gmail.com](mailto:kakakramek@gmail.com) | RM361140 |
-| Tatiane Gabrielle Marçal Rodrigues da Costa | [tatiane.costa@alura.com.br](mailto:tatiane.costa@alura.com.br) | RM365215 |
